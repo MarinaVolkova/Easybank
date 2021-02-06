@@ -15,6 +15,7 @@
     }
   }
     .overlay{
+
     width: 0;
     position: fixed;
     top: 0;
@@ -52,6 +53,7 @@
   }
 
   &_menu{
+  
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -64,6 +66,7 @@
     transform: translateX(-50%);
     background-color: $white;
     border-radius: 5px;
+    z-index: 2;
     a{
       color: $darkBlue;
       padding: 0.625rem;

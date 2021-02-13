@@ -48,7 +48,7 @@
       background-position: center bottom;
       @include breakpoints-up(large){ 
         background: url('/images/bg-intro-desktop.svg');
-        width: 150%;
+        width: 157%;
         background-size: 122%;
         background-repeat: no-repeat;
         background-position: 0% 76%;
@@ -64,15 +64,7 @@
     }
     
      text-align: center;
-      h1{
-        font-weight: 300;
-        font-size: 2.31rem;
-        line-height: 1.15;
-        color: $darkBlue;
-        @include breakpoints-up(large){
-          font-size: $font-xlg;
-        }
-      }
+    
       p{
         line-height: 1.5;
         margin-bottom: 2.25rem;

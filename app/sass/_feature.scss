@@ -1,0 +1,77 @@
+.feature{
+  background-color: $lightGrayishBlue;
+  padding-top: 4.135rem ;
+  padding-bottom: 4.135rem ;
+  text-align: center;
+  @include breakpoints-up(medium){
+    text-align: left;
+  }
+  &_intro{
+    margin-bottom: 1.75rem;
+    text-align: center;
+    @include breakpoints-up(large){
+      text-align: left;
+      width: 60%;
+      margin-bottom: 1.75rem;
+    }
+    
+  }
+  h2{
+    margin-top: 0;
+  }
+  &_intro_text{
+    margin: 0;
+    font-size: 0.875rem;
+    @include breakpoints-up(large){
+    font-size: 1.1rem;
+  }
+  }
+  
+  &_grid{
+    @include breakpoints-up(medium){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &_item{
+    padding: 0.9375rem;
+    padding-left: 0;
+
+    @include breakpoints-up(medium){
+      flex: 0 0 50%;
+    }
+    @include breakpoints-up(large){
+      flex: 1;
+      padding-bottom: 0;
+    }
+  }
+  &_icon{
+    margin-bottom: 1rem;
+    @include breakpoints-up(large){
+       margin-bottom: 1.75rem;
+    }
+  }
+  &_title{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    @include breakpoints-up(large){
+      font-size: 1.3rem;
+      margin-bottom: 1.125rem;
+    }
+    h3{
+      font-weight: 400;
+    }
+  }
+  &_description{
+    line-height: 1.5rem;
+    font-size: 0.875rem;
+
+    @include breakpoints-up(large){
+      font-size: 1rem;
+      >p{
+        margin:0 ;
+      }
+    }
+  }
+}

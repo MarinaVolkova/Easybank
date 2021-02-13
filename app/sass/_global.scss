@@ -13,10 +13,47 @@ body{
   font-weight: 300;
   color: $grayishBlue;
   font-family: 'Public Sans', sans-serif;
+  overflow-y: scroll;
 }
-
+body::-webkit-scrollbar {
+  background-color: #62badd00; 
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #7e7e7e8f;
+  border-radius: 10px;
+}
+main{
+  overflow: hidden;
+}
 a,a:visited,a:hover{
   text-decoration: none;
+}
+
+//text
+h1,h2,h3{
+  line-height: 1.15;
+  color: $darkBlue;
+  font-weight: 300;
+}
+h1{
+    font-size: 2.2rem;
+  
+  @include breakpoints-up(large){
+    font-size: $font-xlg;
+  }
+}
+h2{
+font-size: 1.875rem;
+margin-bottom: 1.5625rem;
+
+  @include breakpoints-up(large){
+    font-size: $font-mlg;
+    margin-bottom: 2.25rem;
+  }
+}
+p{
+  line-height: 1.5;
 }
 
 //spacing

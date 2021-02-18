@@ -1,0 +1,135 @@
+.footer{
+  background-color: $darkBlue;
+  color: $white;
+  padding: 2.5rem;
+  text-align: center;
+&_container{
+    @include breakpoints-up(large){
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "logo links1 links2 cta" 
+    "social links1 links2 cta";
+    justify-items: start;
+  
+  }
+
+}
+
+  a{
+    color: $white;
+  }
+  &_logo{
+    display: block;
+    @include breakpoints-down(medium){
+      margin-bottom: 1.875rem;
+    }
+
+    @include breakpoints-up(large){
+      grid-area: logo;
+      text-align: left;
+      >img{
+        padding-top: 0.5rem;
+      }
+    }
+  }
+
+  &_social{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    @include breakpoints-down(medium){
+      margin-bottom: 1.875rem;
+     
+    }
+
+    @include breakpoints-up(large){
+      grid-area: social;
+      align-self: end;
+      padding-bottom: 0.625rem;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      gap: 1rem;
+    }
+
+    a{
+      &:hover svg path{
+        fill:$limeGreen;
+      }
+
+      svg path{
+        transition: fill 150ms ease-in-out;
+      }
+    }
+
+  }
+
+  &_links1, &_links2{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a{
+      transition: color 150ms ease-in-out;
+      &:hover{
+        color: $limeGreen;
+      }
+    }
+
+    @include breakpoints-up(large){
+      align-items: start;
+      align-self: end;
+      justify-content: space-between;
+    }
+  }
+  &_links1{
+    @include breakpoints-up(large){
+      grid-area: links1;
+
+    }
+    li{
+      margin-bottom: 1.25rem;
+    }
+  }
+  &_links2{
+
+    li:not(:last-child){
+      margin-bottom: 1.25rem;
+    }
+    @include breakpoints-up(large){
+      grid-area: links2;
+      li:last-child{
+        margin-bottom: 1.25rem;
+      }
+
+    }
+  }
+  &_cta{
+    display: inline-block;
+    @include breakpoints-up(large){
+      margin-top: 0;
+      grid-area: cta;
+      text-align: right;
+      justify-self: end;
+      margin-bottom: 1.25rem;
+      .button {
+        margin-top:1.25rem !important;
+      }
+    }
+    .button {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+  }
+  a{
+    &:hover{
+      background:linear-gradient(90deg, rgb(151, 151, 151) 0%, rgba(43,184,214,1) 50%, rgb(88, 197, 221) 100%);
+    }
+  }  
+  }
+  &_copyright{
+    color: $grayishBlue;
+    font-weight: 400;
+    font-size: 15px;
+  }
+}

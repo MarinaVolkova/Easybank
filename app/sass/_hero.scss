@@ -30,12 +30,11 @@
       background-repeat: no-repeat;
       background-position: center bottom;
       @include breakpoints-up(large){
-        width: 120%;
-        height: 122%;
+        width: 115%;
+        height: 125%;
         background-size: 94%;
         background-position: center 150%;
-        left:22%;
-
+        left: 29%;
       }
     }
     &::before{
